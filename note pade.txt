@@ -1,0 +1,50 @@
+use auth file 
+    // new user registration
+    const registerNewUser = (e) => {
+        e.preventDefault();
+        return createUserWithEmailAndPassword(auth, email, password)
+    }
+    // set user name 
+    const setUserName = () => {
+        return updateProfile(auth.currentUser, { displayName: name })
+    }
+
+
+    const verifyEmail = () => {
+        return sendEmailVerification(auth.currentUser)
+    }
+    // reset password 
+    const handleResetPath = (e) => {
+        e.preventDefault();
+
+        sendPasswordResetEmail(auth, email)
+            .then(result => {
+            })
+    }
+
+
+
+
+
+log in register 
+  const handleCreateAccount = (e) => {
+        e.preventDefault();
+        registerNewUser(e)
+            .then((result) => {
+                setUserName()
+                    .then(() => {
+                        verifyEmail()
+                            .then(result => {
+
+
+                                history.push('/home')
+
+
+                            })
+
+
+                    }).catch((error) => {
+
+                    });
+            })
+    }
