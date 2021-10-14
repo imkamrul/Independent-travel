@@ -22,23 +22,23 @@ const Heroic = () => {
                 </Row>
                 <Row className="justify-content-md-center pb-5">
                     <Col xs lg="2" className="heroic-hover">
-                        <i class="fas fa-route fs-1"></i>
+                        <i className="fas fa-route fs-1"></i>
                         <p>TOUR</p>
                     </Col>
 
                     <Col xs lg="2" className="heroic-hover">
-                        <i class="fas fa-car-alt fs-1"></i>
+                        <i className="fas fa-car-alt fs-1"></i>
 
                         <p>CAR</p>
                     </Col>
                     <Col xs lg="2" className="heroic-hover">
-                        <i class="fas fa-hotel fs-1"></i>
+                        <i className="fas fa-hotel fs-1"></i>
 
                         <p>HOTEL</p>
 
                     </Col>
                     <Col xs lg="2" className="heroic-hover">
-                        <i class="fas fa-plane fs-1"></i>
+                        <i className="fas fa-plane fs-1"></i>
                         <p>FLIGHT</p>
                     </Col>
                 </Row>

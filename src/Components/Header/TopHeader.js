@@ -12,7 +12,7 @@ const TopHeader = () => {
                         <p>Contract: Uttara, Dhaka <span className="border-custom text-muted"> </span> Phone :+880123456789</p>
                     </Col>
                     <Col xs={6} md={4} className="text-end">
-                        <i class="fab fa-facebook-square fs-2"></i><i class="fab fa-twitter-square fs-2 ps-2"></i><i class="fab fa-google-plus-g fs-2 ps-2"></i>
+                        <i className="fab fa-facebook-square fs-2"></i><i className="fab fa-twitter-square fs-2 ps-2"></i><i className="fab fa-google-plus-g fs-2 ps-2"></i>
                     </Col>
                 </Row>
 

@@ -7,7 +7,7 @@ const Contack = () => {
     const element = <FontAwesomeIcon icon={faCoffee} />
     return (
         <div>
-            <h1>Contract {element} <i class="fab fa-facebook-square"></i></h1>
+            <h1>Contract {element} <i className="fab fa-facebook-square"></i></h1>
             <InputGroup className="mb-3">
                 <FormControl
                     // placeholder={element}

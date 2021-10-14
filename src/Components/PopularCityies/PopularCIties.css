@@ -1,0 +1,28 @@
+.city-frame{
+   position: relative;
+   cursor: pointer;
+
+} .city-img-tille {
+    position: absolute;
+  margin-left: 20px;
+    bottom: 10px;
+    color: white;
+
+
+} .city-details {
+    position: absolute;
+    bottom: 2px;
+    color: white;
+    right: 15%;
+
+} .city-sm-details {
+    position: absolute;
+    bottom: -5px;
+    color: white;
+    right: 0;
+    padding-right:10px ;
+    font-size: 15px;
+}
+.city-frame:hover{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
