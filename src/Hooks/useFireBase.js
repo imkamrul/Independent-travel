@@ -12,36 +12,17 @@ const useFireBase = () => {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    // const [isLoading, setIsLoading] = useState(true);
+    const [isLoading, setIsLoading] = useState(true);
     const auth = getAuth();
     // new user registration
     const registerNewUser = (e) => {
         e.preventDefault();
-        createUserWithEmailAndPassword(auth, email, password)
-            .then((result) => {
-
-                setUserName()
-
-                console.log(result.user);
-                window.location.reload();
-
-            })
-            .catch((error) => {
-                console.log(error.message);
-            });
+        return createUserWithEmailAndPassword(auth, email, password)
     }
     // set user name 
     const setUserName = () => {
-        updateProfile(auth.currentUser, { displayName: name })
-            .then((result) => {
-
-                setUser(result.user);
-            }).catch((error) => {
-
-            });
+        return updateProfile(auth.currentUser, { displayName: name })
     }
-
-
     const verifyEmail = () => {
         return sendEmailVerification(auth.currentUser)
     }
@@ -61,34 +42,39 @@ const useFireBase = () => {
 
     // google sign in contrl 
     const signInWithgoogle = () => {
+        setIsLoading(true);
 
         return signInWithPopup(auth, googleProvider)
 
     }
     // facebook sign in controlller 
     const signInWithFacebook = () => {
+        setIsLoading(true);
         return signInWithPopup(auth, facebookProvider)
 
     }
     // github signin control 
     const signInWithGithub = () => {
+        setIsLoading(true);
         return signInWithPopup(auth, githubProvider)
 
     }
     // microsoft sign in provider 
     const signInWithMicrosoft = () => {
+        setIsLoading(true);
         return signInWithPopup(auth, microsotfProvider)
 
     }
 
     // log out control 
     const logOut = () => {
+        setIsLoading(true);
 
         signOut(auth)
             .then(() => {
                 setUser({});
 
-            })
+            }).finally(() => setIsLoading(false))
 
             .catch((error) => {
 
@@ -98,19 +84,18 @@ const useFireBase = () => {
 
     // observe user state change
     useEffect(() => {
-        onAuthStateChanged(auth, user => {
+        const unsubscribed = onAuthStateChanged(auth, user => {
             if (user) {
-
                 setUser(user);
             }
             else {
                 setUser({})
             }
-
+            setIsLoading(false);
         });
-
+        return () => unsubscribed;
     }, [])
 
-    return { user, signInWithgoogle, logOut, signInWithFacebook, signInWithMicrosoft, signInWithGithub, setName, setEmail, setPassword, registerNewUser, handleResetPath, processLogin, verifyEmail, setUserName }
+    return { user, signInWithgoogle, logOut, signInWithFacebook, signInWithMicrosoft, signInWithGithub, setName, setEmail, setPassword, registerNewUser, handleResetPath, processLogin, verifyEmail, setUserName, setIsLoading, isLoading }
 }
 export default useFireBase;

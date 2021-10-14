@@ -4,3 +4,9 @@
     font-size: 22px;
     color: black;
 }
+.border-custom{
+    border-right: 2px solid black;
+    margin: 0 5px;
+    line-height: 10px;
+    
+}

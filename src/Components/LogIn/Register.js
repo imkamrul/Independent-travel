@@ -19,6 +19,29 @@ const Register = () => {
         setPassword(e.target.value);
 
     }
+    const handleCreateAccount = (e) => {
+        e.preventDefault();
+        registerNewUser(e)
+            .then((result) => {
+                setUserName()
+                    .then(() => {
+                        verifyEmail()
+                            .then(result => {
+
+
+                                history.push('/home')
+                                window.location.reload();
+
+
+
+                            })
+
+
+                    }).catch((error) => {
+
+                    });
+            })
+    }
 
     return (
         <div className="row g-0  d-flex justify-content-center mt-5">
@@ -54,7 +77,7 @@ const Register = () => {
                                     </div>
                                 </div>
                                 <div className="text-center">
-                                    <button className="button-75" type="submit"><span className="text pb-4" onClick={registerNewUser}>Sign Up</span></button>
+                                    <button className="button-75" type="submit"><span className="text pb-4" onClick={handleCreateAccount}>Sign Up</span></button>
                                 </div>
 
 

@@ -13,13 +13,14 @@ const SocialAPP = () => {
     const location = useLocation();
     const redirect_uri = location.state?.from || '/home'
     const history = useHistory();
-    const { signInWithgoogle, signInWithFacebook, signInWithMicrosoft, signInWithGithub } = useAuth();
+    const { signInWithgoogle, signInWithFacebook, signInWithMicrosoft, signInWithGithub, setIsLoading } = useAuth();
     const handleGoogleLogIn = () => {
         signInWithgoogle()
             .then((result) => {
                 history.push(redirect_uri)
                 // console.log(result.user);
-            }).catch((error) => {
+            }).finally(() => setIsLoading(false))
+            .catch((error) => {
                 setError("Log in failed");
             });
     }
@@ -27,7 +28,9 @@ const SocialAPP = () => {
         signInWithFacebook()
             .then((result) => {
                 history.push(redirect_uri)
-            }).catch((error) => {
+            })
+            .finally(() => setIsLoading(false))
+            .catch((error) => {
                 setError("Log in failed");
             });
     }
@@ -35,7 +38,8 @@ const SocialAPP = () => {
         signInWithGithub()
             .then((result) => {
                 history.push(redirect_uri)
-            }).catch((error) => {
+            }).finally(() => setIsLoading(false))
+            .catch((error) => {
                 setError("Log in failed");
             });
     }
@@ -44,7 +48,8 @@ const SocialAPP = () => {
             .then((result) => {
                 history.push(redirect_uri)
                 console.log(result.user);
-            }).catch((error) => {
+            }).finally(() => setIsLoading(false))
+            .catch((error) => {
                 setError("Log in failed");
             });
     }
