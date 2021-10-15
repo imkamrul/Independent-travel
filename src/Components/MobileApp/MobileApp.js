@@ -13,14 +13,14 @@ const MobileApp = () => {
                 <Col md={6} className="ps-3">
                     <h1 className="pt-5 mt-5">Have you tried our mobile app?</h1>
                     <p className="pt-3 fs-5">World's leading tour and travels Booking website,Over 30,000 packages worldwide. Book travel packages and enjoy your holidays with distinctive experience</p>
-                    <p className="fs-4"><i class="fas fa-check-square text-info pe-3"></i> <span>Easy Hotel Booking</span></p>
-                    <p className="fs-4"><i class="fas fa-check-square text-info pe-3"></i> <span>Tour and Travel Packages</span></p>
-                    <p className="fs-4"><i class="fas fa-check-square text-info pe-3"></i> <span>Package Reviews and Ratings</span></p>
-                    <p className="fs-4"><i class="fas fa-check-square text-info pe-3"></i> <span>Manage your Bookings, Enquiry and Reviews</span></p>
-                    <p className="fs-5 text-muted">Download Now From</p>
+                    <p className="fs-4"><i className="fas fa-check-square text-info pe-3"></i> <span>Easy Hotel Booking</span></p>
+                    <p className="fs-4"><i className="fas fa-check-square text-info pe-3"></i> <span>Tour and Travel Packages</span></p>
+                    <p className="fs-4"><i className="fas fa-check-square text-info pe-3"></i> <span>Package Reviews and Ratings</span></p>
+                    <p className="fs-4"><i className="fas fa-check-square text-info pe-3"></i> <span>Manage your Bookings, Enquiry and Reviews</span></p>
+
                     <Row>
-                        <Col md={6}><img src={googleD} style={{ height: "100px" }} alt="" /></Col>
-                        <Col md={6}> <img src={apple} alt="" style={{ height: "100px" }} /></Col>
+                        <Col md={6}><img src={googleD} className="img-fluid" alt="" /></Col>
+                        <Col md={6}> <img src={apple} alt="" className="img-fluid" /></Col>
                     </Row>
 
 

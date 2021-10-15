@@ -5,7 +5,7 @@ import './PopularCIties.css'
 
 const PopularCities = () => {
     return (
-        <Container className="mb-5">
+        <Container className="mb-5" id="cities">
             <Row id="packages" className="mt-3 ">
                 <Col>
                     <h1 className="text-center mt-5 pt-5">Popular

@@ -6,7 +6,7 @@ const usePackages = () => {
         fetch('./tourSpot.json')
             .then(res => res.json())
             .then(data => {
-                console.log(data)
+
                 setLocation(data)
 
             })

@@ -7,12 +7,12 @@ const Event = ({ place }) => {
 
     return (
         <Row className=" pt-3 events-border">
-            <Col xs={1}><p>{id}</p></Col>
-            <Col xs={6}><p><img src={img} style={{ height: "50px" }} alt="" /> <span className="ps-3">Event Name</span></p></Col>
-            <Col xs={1}><p>16.12.2021</p></Col>
-            <Col xs={1}><p>10.00 PM</p></Col>
-            <Col xs={2}><p>{placeName}</p></Col>
-            <Col xs={1} className="px-auto py-auto"><Button variant="info">Book</Button></Col>
+            <Col md={1} xs={2}><p>{id}</p></Col>
+            <Col md={6} xs={5}><p><img src={img} style={{ height: "50px" }} alt="" /> <span className="ps-md-3">Event Name</span></p></Col>
+            <Col md={1} xs={4}><p>16.12.2021</p></Col>
+            <Col md={1} xs={3}><p>10.00PM</p></Col>
+            <Col md={2} xs={4}><p>{placeName}</p></Col>
+            <Col md={1} xs={4} className="px-auto py-auto"><Button variant="info">Book</Button></Col>
         </Row>
     );
 };

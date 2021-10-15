@@ -3,7 +3,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import './App.css';
 import Booking from './Components/Booking/Booking';
-import Contack from './Components/Contact/Contack';
+
+import Footer from './Components/Footer/Footer';
 import Header from './Components/Header/Header';
 import Home from './Components/Home/Home';
 import LogIn from './Components/LogIn/LogIn';
@@ -25,10 +26,8 @@ function App() {
             <Route path="/home">
               <Home></Home>
             </Route>
-            <Route path="/contact">
-              <Contack></Contack>
-            </Route>
-            <PrivateRoute path="/booking">
+
+            <PrivateRoute path="/booking/:id">
               <Booking></Booking>
             </PrivateRoute>
             <Route path="/login">
@@ -39,6 +38,7 @@ function App() {
             </Route>
 
           </Switch>
+          <Footer></Footer>
         </BrowserRouter>
       </AuthProvider>
 

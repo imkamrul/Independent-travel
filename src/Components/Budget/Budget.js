@@ -10,16 +10,16 @@ const Budget = () => {
                     <Col >
                         <h1 className="text-center pt-5  mt-5 text-info">    STANDARDIZED BUDGET ROOMS  </h1>
                         <div className="d-flex justify-content-center">      <hr className="w-25 " /></div>
-                        <p className="text-center fs-2 d-flex justify-content-center">
-                            <div className="budget-icon"> <i class="fas fa-coffee"></i></div>
-                            <div className="budget-icon">      <i class="fas fa-wifi"></i></div>
-                            <div className="budget-icon"> <i class="fas fa-tv"></i> </div>
-                            <div className="budget-icon">        <i class="fas fa-swimmer"></i></div>
-                            <div className="budget-icon">           <i class="fas fa-dumbbell"></i></div>
+                        <span className="text-center fs-2 d-flex justify-content-center">
+                            <div className="budget-icon"> <i className="fas fa-coffee"></i></div>
+                            <div className="budget-icon">      <i className="fas fa-wifi"></i></div>
+                            <div className="budget-icon"> <i className="fas fa-tv"></i> </div>
+                            <div className="budget-icon">        <i className="fas fa-swimmer"></i></div>
+                            <div className="budget-icon">           <i className="fas fa-dumbbell"></i></div>
 
 
 
-                        </p>
+                        </span>
                     </Col>
                 </Row>
             </Container>

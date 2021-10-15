@@ -9,12 +9,7 @@ import TopHeader from './TopHeader';
 
 const Header = () => {
     const { user, logOut } = useAuth();
-    // console.log(user);
 
-    const activeStyle = {
-        fontWeight: "bold",
-        color: "blue"
-    }
 
     return (
         <div>
@@ -39,10 +34,14 @@ const Header = () => {
                         <Nav className="ms-auto nav-style">
                             <Nav.Link as={HashLink} to="/home#home">Home</Nav.Link>
                             <Nav.Link as={HashLink} to="/home#packages">Packages</Nav.Link>
+                            <Nav.Link as={HashLink} to="/home#cities">Cities</Nav.Link>
+                            <Nav.Link as={HashLink} to="/home#hotels">Hotel</Nav.Link>
 
-                            {/* <NavLink activeStyle={activeStyle} to="/home">Home</NavLink> */}
-                            <NavLink activeStyle={activeStyle} to="/booking">Booking</NavLink>
-                            <NavLink activeStyle={activeStyle} to="/contact">Contact</NavLink>
+                            <Nav.Link as={HashLink} to="/home#events">Events</Nav.Link>
+                            <Nav.Link as={HashLink} to="/home#contact">Contact</Nav.Link>
+                            <Nav.Link as={HashLink} to="/booking">Booking</Nav.Link>
+
+
                             <span className=" text-light pt-1 px-3 fw-bolder fs-5">{user.displayName}</span>
 
                             {user.email ? <Button variant="warning" onClick={logOut}>Log Out</Button>
@@ -55,7 +54,7 @@ const Header = () => {
                 </Container>
             </Navbar>
 
-        </div>
+        </div >
     );
 };
 

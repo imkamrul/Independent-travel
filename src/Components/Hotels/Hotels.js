@@ -6,7 +6,7 @@ import Hotel from './Hotel';
 const Hotels = () => {
     const { location } = usePackages();
     return (
-        <Container className="pb-5">
+        <Container className="pb-5" id="hotels">
             <Row id="packages" className="mt-3 ">
                 <Col>
                     <h1 className="text-center mt-5 pt-5">Hotels

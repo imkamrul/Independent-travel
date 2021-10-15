@@ -8,6 +8,7 @@ import MobileApp from '../MobileApp/MobileApp';
 import Packages from '../Packages/Packages';
 import PopularCities from '../PopularCityies/PopularCities';
 import Sites from '../Sites/Sites';
+import Tips from '../Tips/Tips';
 
 import './Home.css'
 
@@ -26,6 +27,7 @@ const Home = () => {
             <Events></Events>
             <Sites></Sites>
             <MobileApp></MobileApp>
+            <Tips></Tips>
         </div>
     );
 };

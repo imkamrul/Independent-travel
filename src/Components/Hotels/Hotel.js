@@ -10,15 +10,15 @@ const Hotel = ({ place }) => {
                 <Card.Img variant="top" src={img} />
                 <Card.Body>
                     <Card.Title>{placeName}</Card.Title>
-                    <Card.Text className="d-flex justify-content-between">
-                        <p className="mt-2 text-warning fs-5">Rating :<Rating
+                    <Card.Text className="d-flex justify-content-between ">
+                        <span className="mt-2 text-warning fs-5">Rating :<Rating
                             initialRating={id}
 
                             emptySymbol="far fa-star "
                             fullSymbol="fas fa-star "
                             readonly
-                        /></p>
-                        <p className="fs-3 text-info"> $3400 </p>
+                        /></span>
+                        <span className="fs-3 text-info pt-2"> $3400 </span>
                     </Card.Text>
 
                 </Card.Body>

@@ -6,7 +6,7 @@ import Event from './Event';
 const Events = () => {
     const { location } = usePackages();
     return (
-        <Container>
+        <Container id="events">
             <Row className="mt-3 ">
                 <Col>
                     <h1 className="text-center mt-5 pt-5">Tops
@@ -22,12 +22,12 @@ const Events = () => {
             <Row className="mb-5">
                 <Col xm={12} className="">
                     <Row className="fs-4 fw-bolder pt-3 border">
-                        <Col xs={1}><p>#</p></Col>
-                        <Col xs={6}><p>Event Name</p></Col>
-                        <Col xs={1}><p>Date</p></Col>
-                        <Col xs={1}><p>Time</p></Col>
-                        <Col xs={2}><p>Location</p></Col>
-                        <Col xs={1}><p>Book</p></Col>
+                        <Col md={1} xs={2}><p>#</p></Col>
+                        <Col md={6} xs={7}><p>Event Name</p></Col>
+                        <Col md={1} xs={2}><p>Date</p></Col>
+                        <Col md={1} xs={4}><p>Time</p></Col>
+                        <Col md={2} xs={4}><p>Location</p></Col>
+                        <Col md={1} xs={4}><p>Book</p></Col>
                     </Row>
                     {
                         location?.length ? location.map(place => <Event
