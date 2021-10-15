@@ -1,9 +1,13 @@
 import React from 'react';
+import Budget from '../Budget/Budget';
+import Events from '../Events/Events';
 
 import Heroic from '../Heroic/Heroic';
 import Hotels from '../Hotels/Hotels';
+import MobileApp from '../MobileApp/MobileApp';
 import Packages from '../Packages/Packages';
 import PopularCities from '../PopularCityies/PopularCities';
+import Sites from '../Sites/Sites';
 
 import './Home.css'
 
@@ -18,6 +22,10 @@ const Home = () => {
             <Packages></Packages>
             <PopularCities></PopularCities>
             <Hotels></Hotels>
+            <Budget></Budget>
+            <Events></Events>
+            <Sites></Sites>
+            <MobileApp></MobileApp>
         </div>
     );
 };

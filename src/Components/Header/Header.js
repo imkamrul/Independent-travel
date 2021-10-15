@@ -19,7 +19,8 @@ const Header = () => {
     return (
         <div>
             <TopHeader></TopHeader>
-            <Navbar style={{ background: "#89BBD4" }} expand="lg">
+
+            <Navbar style={{ background: "#89BBD4" }} expand="lg" sticky="top">
                 <Container className="nav-style">
                     <NavLink to="/">
                         <img
